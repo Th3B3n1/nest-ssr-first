@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello profile page!</h1>
+    <img src=<%= user.pic %> alt="Profilkép">
+    <ul>
+        <li>Name <%= user.name %></li>
+
+        <% if (user.age > 70) { %>
+            <li>Age <%= user.age %></li>
+        <% } else { %>
+            <li><i>Age <%= user.age %></i></li>
+        <% } %>
+    </ul>
+    <table>
+        <tr>
+        <% for (let h of user.hobbies) { %>
+            <td><%= h %></td>
+        <% } %>
+        </tr>
+    </table>
+
+    <footer>
+        <%= new Date() %>
+    </footer>
+</body>
+</html>
